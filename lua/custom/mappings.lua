@@ -18,6 +18,9 @@ M.general = {
     ["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
   },
   n = {
+    -- Nav
+    ["<C-d>"] = {"<C-d>zz"},
+    ["<C-u>"] = {"<C-u>zz"},
     -- Tab switching
     ["<S-l>"] = {
       function()
