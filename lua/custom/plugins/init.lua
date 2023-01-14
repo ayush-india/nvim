@@ -10,32 +10,32 @@ return {
       require("core.utils").load_mappings "whichkey"
     end,
   },
+
   ["neovim/nvim-lspconfig"] = {
-      config = function()
-        require "plugins.configs.lspconfig"
-        require "custom.plugins.lspconfig"
-      end,
+    config = function()
+      require "plugins.configs.lspconfig"
+      require "custom.plugins.lspconfig"
+    end,
   },
   ["ThePrimeagen/harpoon"] = {
     setup = function()
-        require("core.lazy_load").on_file_open "harpoon"
+      require("core.lazy_load").on_file_open "harpoon"
     end,
   },
 
-
   ["williamboman/mason.nvim"] = {
     override_options = {
-          ensure_installed = { "rust-analyzer"}
-      }
+      ensure_installed = { "rust-analyzer" },
+    },
   },
   ["sbdchd/neoformat"] = {
     setup = function()
-        require("core.lazy_load").on_file_open "neoformat"
+      require("core.lazy_load").on_file_open "neoformat"
     end,
   },
   ["folke/trouble.nvim"] = {
     setup = function()
-        require("core.lazy_load").on_file_open "trouble.nvim"
+      require("core.lazy_load").on_file_open "trouble.nvim"
     end,
   },
 }
