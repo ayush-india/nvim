@@ -63,9 +63,15 @@ M.general = {
     },
     ["<C-k>"] = {
       function()
-        r1quire("harpoon.ui").nav_file(3)
+       require("harpoon.ui").nav_file(3)
       end,
       "Nav har 3",
+    },
+    ["<leader>t"] = {
+      function()
+        require("harpoon.term").gotoTerminal(1)
+      end,
+      "Nav har 4",
     },
     ["<C-l>"] = {
       function()
