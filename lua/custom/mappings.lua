@@ -18,6 +18,7 @@ M.general = {
     ["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
   },
   n = {
+    ["t"] = {"<cmd>:TroubleToggle<CR>", "Trouble", opts = {nowait = true}},
     -- Nav
     ["<C-d>"] = {"<C-d>zz"},
     ["<C-u>"] = {"<C-u>zz"},
