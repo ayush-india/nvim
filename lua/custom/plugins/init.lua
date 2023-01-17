@@ -1,4 +1,18 @@
 return {
+  ["nvim-tree/nvim-tree.lua"] = {
+    git = {
+      enable = true,
+    },
+
+    renderer = {
+      highlight_git = true,
+      icons = {
+        show = {
+          git = true,
+        },
+      },
+    },
+  },
   ["folke/which-key.nvim"] = {
     disable = false,
     module = "which-key",
