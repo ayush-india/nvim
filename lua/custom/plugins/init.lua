@@ -1,9 +1,4 @@
 return {
-  ["jcdickinson/wpm.nvim"] = {
-    setup = function()
-      require("core.lazy_load").on_file_open "wpm"
-    end,
-  },
   ["nvim-tree/nvim-tree.lua"] = {
     git = {
       enable = true,
