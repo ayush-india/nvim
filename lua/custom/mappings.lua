@@ -18,10 +18,43 @@ M.general = {
     ["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
   },
   n = {
-    ["t"] = {"<cmd>:TroubleToggle<CR>", "Trouble", opts = {nowait = true}},
+    -- Git
+    ["<leader>gs"] = {
+      function()
+        require("gitsigns").stage_hunk()
+      end,
+      "Stage hunk",
+    },
+    ["<leader>gS"] = {
+      function()
+        require("gitsigns").stage_buffer()
+      end,
+      "Stage buffer",
+    },
+    ["<leader>gR"] = {
+      function()
+        require("gitsigns").reset_buffer()
+      end,
+      "Reset hunk",
+    },
+    ["<leader>gr"] = {
+      function()
+        require("gitsigns").reset_hunk()
+      end,
+      "Reset hunk",
+    },
+    ["<leader>gh"] = {
+      function()
+        require("gitsigns").preview_hunk()
+      end,
+      "Preview hunk",
+    },
+    -- Diagnostics
+    ["t"] = { "<cmd>:Trouble document_diagnostics <CR>", "Trouble", opts = { nowait = true } },
+    ["T"] = { "<cmd>:Trouble workspace_diagnostics <CR>", "Trouble", opts = { nowait = true } },
     -- Nav
-    ["<C-d>"] = {"<C-d>zz"},
-    ["<C-u>"] = {"<C-u>zz"},
+    ["<C-d>"] = { "<C-d>zz" },
+    ["<C-u>"] = { "<C-u>zz" },
     -- Tab switching
     ["<S-l>"] = {
       function()
@@ -64,15 +97,15 @@ M.general = {
     },
     ["<C-k>"] = {
       function()
-       require("harpoon.ui").nav_file(3)
+        require("harpoon.ui").nav_file(3)
       end,
       "Nav har 3",
     },
-    ["<leader>t"] = {
+    ["<C-x>"] = {
       function()
         require("harpoon.term").gotoTerminal(1)
       end,
-      "Nav har 4",
+      "GoTo terminal",
     },
     ["<C-l>"] = {
       function()
