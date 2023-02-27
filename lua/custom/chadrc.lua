@@ -1,9 +1,9 @@
 local M = {}
 
 M.ui = {
-  theme = "gruvchad",
-  transparency = true,
-  theme_toggle = { "gruvchad", "gruvbox_light" },
+  theme = "everforest",
+  transparency = false,
+  theme_toggle = { "tokyodark", "everforest" },
 }
 
 M.plugins = require "custom.plugins"
