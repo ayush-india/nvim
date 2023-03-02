@@ -35,7 +35,7 @@ M.general = {
       function()
         require("gitsigns").reset_buffer()
       end,
-      "Reset hunk",
+      "Reset Buffer",
     },
     ["<leader>gr"] = {
       function()
