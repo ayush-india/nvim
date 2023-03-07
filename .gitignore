@@ -2,6 +2,4 @@ spell
 ftplugin
 coc-settings.json
 .luarc.json
-cheatsheet.txt
-
-lua/example_config
+lazy-lock.json

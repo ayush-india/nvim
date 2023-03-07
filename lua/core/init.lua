@@ -2,11 +2,11 @@
 local is_windows = vim.loop.os_uname().sysname == "Windows_NT"
 vim.env.PATH = vim.env.PATH .. (is_windows and ";" or ":") .. vim.fn.stdpath "data" .. "/mason/bin"
 
--- commands
-vim.cmd "silent! command! NvChadUpdate lua require('nvchad').update_nvchad()"
-vim.cmd "silent! command! NvChadSnapshotCreate lua require('nvchad').snap_create()"
-vim.cmd "silent! command! NvChadSnapshotDelete lua require('nvchad').snap_delete()"
-vim.cmd "silent! command! NvChadSnapshotCheckout lua require('nvchad').snap_checkout()"
+local new_cmd = vim.api.nvim_create_user_command
+
+new_cmd("NvChadUpdate", function()
+  require("nvchad").update_nvchad()
+end, {})
 
 -- autocmds
 local autocmd = vim.api.nvim_create_autocmd
@@ -19,9 +19,37 @@ autocmd("FileType", {
   end,
 })
 
--- wrap the PackerSync command to warn people before using it in NvChadSnapshots
-autocmd("VimEnter", {
-  callback = function()
-    vim.cmd "command! -nargs=* -complete=customlist,v:lua.require'packer'.plugin_complete PackerSync lua require('plugins') require('core.utils').packer_sync(<f-args>)"
+local sep = vim.loop.os_uname().sysname:find "windows" and "\\" or "/"
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = vim.fn.glob(
+    table.concat({
+      vim.fn.stdpath "config",
+      "lua",
+      "custom",
+      "**",
+      "*.lua",
+    }, sep),
+    true,
+    true,
+    true
+  ),
+
+  group = vim.api.nvim_create_augroup("ReloadNvChad", {}),
+
+  callback = function(opts)
+    require("plenary.reload").reload_module "base46"
+    local file = string
+      .gsub(vim.fn.fnamemodify(opts.file, ":r"), vim.fn.stdpath "config" .. sep .. "lua" .. sep, "")
+      :gsub(sep, ".")
+    require("plenary.reload").reload_module(file)
+    require("plenary.reload").reload_module "custom.chadrc"
+
+    local config = require("core.utils").load_config().ui
+
+    vim.opt.statusline = "%!v:lua.require('nvchad_ui.statusline." .. config.statusline.theme .. "').run()"
+
+    require("base46").load_all_highlights()
+    -- vim.cmd("redraw!")
   end,
 })
