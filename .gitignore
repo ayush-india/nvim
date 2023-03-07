@@ -3,3 +3,5 @@ ftplugin
 coc-settings.json
 .luarc.json
 lazy-lock.json
+
+lua/example_config
