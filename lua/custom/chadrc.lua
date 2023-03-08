@@ -1,7 +1,7 @@
 local M = {}
 
 M.ui = {
-  theme = "quiet",
+  theme = "tokyodark",
   transparency = false,
   theme_toggle = { "tokyodark", "everforest" },
 
@@ -24,7 +24,7 @@ M.ui = {
   },
 }
 
-M.plugins = require "custom.plugins"
+M.plugins = "custom.plugins"
 M.mappings = require "custom.mappings"
 
 return M
