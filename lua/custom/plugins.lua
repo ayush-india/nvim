@@ -50,10 +50,10 @@ local plugins = {
   "folke/trouble.nvim",
 
   -- To make a plugin not be loaded
-  {
-    "NvChad/nvim-colorizer.lua",
-    enabled = false
-  },
+  -- {
+  --   "NvChad/nvim-colorizer.lua",
+  --   enabled = false
+  -- },
 
   -- Uncomment if you want to re-enable which-key
   -- {
