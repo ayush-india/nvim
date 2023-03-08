@@ -69,7 +69,15 @@ M.general = {
       "goto prev buffer",
     },
     -- Formatting
-    ["<leader>fm"] = { "<cmd>:Neoformat<CR>", "format the current file" },
+    -- ["<leader>fm"] = { "<cmd>:Neoformat<CR>", "format the current file" },
+
+    ["<leader>fm"] = {
+      function()
+        vim.lsp.buf.format { async = true }
+      end,
+      "lsp formatting",
+    },
+
     -- Harpoon :)
     ["<leader>a"] = {
       function()
