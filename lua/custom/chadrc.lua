@@ -1,9 +1,9 @@
 local M = {}
 
 M.ui = {
-  theme = "tokyodark",
-  transparency = false,
-  theme_toggle = { "tokyodark", "everforest" },
+  theme = "vscode_dark",
+  transparency = true,
+  theme_toggle = { "vscode_dark", "tokyodark" },
 
   -- cmp themeing
   cmp = {
