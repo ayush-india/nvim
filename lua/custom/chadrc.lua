@@ -1,9 +1,9 @@
 local M = {}
 
 M.ui = {
-  theme = "github_dark",
+  theme = "monochrome",
   transparency = true,
-  theme_toggle = { "github_dark", "tokyodark" },
+  theme_toggle = { "tokyodark", "monochrome" },
 
   -- cmp themeing
   cmp = {
