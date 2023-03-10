@@ -10,16 +10,4 @@ for _, lsp in ipairs(servers) do
     on_attach = on_attach,
     capabilities = capabilities,
   }
-  if lsp == "rust_analyzer" then
-    lspconfig.rust_analyzer.setup {
-      on_attach = on_attach,
-      settings = {
-        ["rust-analyzer"] = {
-          check = {
-            extraArgs = { "-r" },
-          },
-        },
-      },
-    }
-  end
 end
