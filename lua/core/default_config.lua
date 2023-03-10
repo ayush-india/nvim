@@ -28,6 +28,10 @@ M.ui = {
     selected_item_bg = "colored", -- colored / simple
   },
 
+  telescope = {
+    style = "borderless", -- borderless / bordered
+  },
+
   ------------------------------- nvchad_ui modules -----------------------------
   statusline = {
     theme = "default", -- default/vscode/vscode_colored/minimal
@@ -78,6 +82,6 @@ M.plugins = "" -- path i.e "custom.plugins" -> custom/plugins.lua only and not c
 M.lazy_nvim = {} -- config for lazy.nvim startup options
 
 -- these are default mappings, check core.mappings for table structure
-M.mappings = require "core.mappings"
+M.mappings = {}
 
 return M
