@@ -22,6 +22,10 @@ M.ui = {
     separator_style = "block",
     overriden_modules = nil,
   },
+
+  telescope = {
+    style = "bordered", -- borderless / bordered
+  },
 }
 
 M.plugins = "custom.plugins"
