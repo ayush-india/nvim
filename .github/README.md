@@ -1,15 +1,15 @@
 <h1 align="center">NvChad</h1>
 
 <div align="center">
-	<a href="https://nvchad.github.io/">Home</a>
+	<a href="https://nvchad.com/">Home</a>
   <span> • </span>
-    	<a href="https://nvchad.github.io/quickstart/install">Install</a>
+    	<a href="https://nvchad.com/#/docs/quickstart/install">Install</a>
   <span> • </span>
-       	<a href="https://nvchad.github.io/contribute">Contribute</a>
+       	<a href="https://nvchad.com/#/docs/contribute">Contribute</a>
   <span> • </span>
 	<a href="https://github.com/NvChad/NvChad#gift_heart-support">Support</a>
   <span> • </span>
-        <a href="https://nvchad.github.io/Features">Features</a>
+        <a href="https://nvchad.com/#/docs/features">Features</a>
   <p></p>
 </div> 
 
@@ -109,3 +109,16 @@ A fuzzy file finder, picker, sorter, previewer and much more:
 
 - I'm decent at ricing i.e customizing system and making it look pretty so I posted my neovim rice on [neovim subreddit](https://www.reddit.com/r/neovim/comments/m3xl4f/neovim_rice/), my neovim-dotfiles github repo blew up and then I had to come up with a name, I was amazed by the chad meme lol so I put NvChad as the name, the chad word in here doesnt literally mean the chad guy but in the sense such as chad linux vs windows i.e meaning superior, best etc. NvChad was made for my personal use but it gained some popularity which inspired me to make a public config i.e config usable by many and less hassle to update as everyone's going to use the same base config (NvChad) with their custom modifications (which are gitignored so that wont mess up), without the custom config stuff users would have to keep a track of every commit and copy paste git diffs to manually update nvchad.
  
+## :gift_heart: Support
+
+If you like NvChad and would like to support & appreciate it via donation then I'll gladly accept it. 
+
+[![kofi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/siduck)
+[![paypal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/siduck76)
+[![buymeacoffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/siduck)
+[![patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://www.patreon.com/siduck)
+
+## Credits
+
+- [Elianiva](https://github.com/elianiva) helped me with NeoVim Lua related issues many times, NvChad wouldn't exist without his help at all as he helped me in my initial neovim journey!
+- @lorvethe for making the beautiful NvChad logo.
